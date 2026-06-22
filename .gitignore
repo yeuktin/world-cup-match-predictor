@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.DS_Store
+.ipynb_checkpoints/
+
+*.db
+models/*.pkl
+models/*.joblib
+
+data/external/
+data_backup/
+database_backup/
+app/*backup*.py
+src/*backup*.py

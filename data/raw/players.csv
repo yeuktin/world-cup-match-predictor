@@ -1,0 +1,20 @@
+player_id,player_name,team_name,position,goals_per_90,starter_rating
+1,Lionel Messi,Argentina,FW,0.62,0.85
+2,Lautaro Martinez,Argentina,FW,0.55,0.72
+3,Kylian Mbappe,France,FW,0.70,0.90
+4,Antoine Griezmann,France,MF,0.35,0.80
+5,Vinicius Junior,Brazil,FW,0.48,0.82
+6,Harry Kane,England,FW,0.68,0.90
+7,Cristiano Ronaldo,Portugal,FW,0.58,0.70
+8,Alvaro Morata,Spain,FW,0.43,0.68
+9,Jamal Musiala,Germany,MF,0.32,0.78
+10,Memphis Depay,Netherlands,FW,0.44,0.72
+11,Jonathan David,Canada,FW,0.51,0.80
+12,Alphonso Davies,Canada,DF,0.18,0.88
+13,Christian Pulisic,United States,FW,0.39,0.84
+14,Santiago Gimenez,Mexico,FW,0.45,0.76
+15,Takefusa Kubo,Japan,MF,0.28,0.78
+16,Youssef En-Nesyri,Morocco,FW,0.42,0.74
+17,Darwin Nunez,Uruguay,FW,0.50,0.77
+18,Luka Modric,Croatia,MF,0.18,0.75
+19,Sadio Mane,Senegal,FW,0.46,0.78

@@ -1,155 +1,150 @@
-# World Cup Match Predictor 
+# World Cup Match Predictor
 
-A public portfolio project that predicts international football match outcomes using **Python, SQL, machine learning, SQLite, pandas, scikit-learn, Plotly, and Streamlit**.
+![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python)
+![SQL](https://img.shields.io/badge/SQL-SQLite-green?logo=sqlite)
+![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-red?logo=streamlit)
+![Scikit-Learn](https://img.shields.io/badge/ML-Scikit--Learn-orange?logo=scikitlearn)
+![Kaggle](https://img.shields.io/badge/Data-Kaggle-20BEFF?logo=kaggle)
+![GitHub](https://img.shields.io/badge/Version_Control-GitHub-black?logo=github)
 
-This project is designed as an  first: it uses mock CSV data so the app works immediately, while keeping the structure ready for real World Cup data from Kaggle, StatsBomb open data, or a football API.
+## Overview
+
+A sports analytics application that predicts international football match outcomes using machine learning, SQL, and historical match data.
+
+This project integrates **49,477 international football matches** dating back to **1872** from the Kaggle International Football Results dataset and uses SQL-powered analytics to generate:
+
+- Match outcome probabilities
+- Expected goals (xG)
+- Team comparisons
+- Historical performance metrics
+- Scoreline forecasts
+
+---
 
 ## Features
 
-- Select two national teams
-- Predict Team A win probability, draw probability, and Team B win probability
-- Estimate expected goals for both teams
-- Show most likely scorelines with probabilities
-- Show likely goal scorers and player scoring probabilities
-- Store predictions in a SQLite database
-- Display SQL-powered views inside the app
-- Deployable with Streamlit Community Cloud
+- Predict Team A win probability
+- Predict draw probability
+- Predict Team B win probability
+- Estimate expected goals (xG)
+- Generate likely scorelines
+- Compare national teams side-by-side
+- Display historical team statistics
+- Store predictions in SQLite
+- Interactive Streamlit dashboard
 
-## Skills Demonstrated
+---
 
-- **Python:** pandas, numpy, modular project structure
-- **SQL:** SQLite schema, relational tables, SQL queries, prediction storage
-- **Machine Learning:** scikit-learn classification and regression models
-- **Data Engineering:** CSV ingestion into SQL database
-- **Data Visualization:** Plotly charts in Streamlit
-- **Deployment:** Streamlit app ready for public portfolio use
-- **GitHub:** clean repo structure and documentation
+## Dataset
+
+**Source:** Kaggle International Football Results Dataset
+
+### Dataset Statistics
+
+| Metric | Value |
+|----------|----------|
+| Historical Matches | 49,477 |
+| Date Range | 1872 - Present |
+| Data Source | Kaggle |
+| Competition Types | International Matches |
+
+The historical dataset is loaded into SQLite and used to generate team performance metrics and prediction features.
+
+---
+
+## Tech Stack
+
+### Languages
+
+- Python
+- SQL
+
+### Libraries
+
+- pandas
+- NumPy
+- scikit-learn
+- Streamlit
+
+### Database
+
+- SQLite
+
+### Version Control
+
+- Git
+- GitHub
+
+---
+
+## Technical Skills Demonstrated
+
+### Data Engineering
+
+- CSV ingestion pipelines
+- Data transformation
+- SQLite database design
+- Historical data integration
+
+### SQL
+
+- Relational database design
+- Analytical queries
+- Historical performance calculations
+- Prediction storage and retrieval
+
+### Machine Learning
+
+- Match outcome prediction
+- Expected goals estimation
+- Feature engineering
+- Model serialization with Joblib
+
+### Software Development
+
+- Modular Python architecture
+- Interactive dashboard development
+- Git version control
+
+---
 
 ## Project Structure
 
 ```text
-world_cup_predictor_mvp/
-  app/
-    app.py
-  data/
-    raw/
-      teams.csv
-      players.csv
-      matches.csv
-  database/
-    schema.sql
-  models/
-  src/
-    database.py
-    features.py
-    predict.py
-    train_model.py
-  setup_database.py
-  run_training.py
-  requirements.txt
-  README.md
-  .gitignore
+world-cup-match-predictor/
+│
+├── app/
+├── src/
+├── data/
+├── database/
+├── models/
+│
+├── setup_database.py
+├── upgrade_world_cup_data.py
+├── load_historical_matches.py
+├── run_training.py
+├── requirements.txt
+└── README.md
 ```
 
-## Local Setup
+---
 
-### 1. Open the folder in VS Code
-
-```bash
-cd world_cup_predictor_mvp
-code .
-```
-
-### 2. Create a virtual environment
-
-Mac/Linux:
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-```
-
-Windows PowerShell:
-
-```powershell
-python -m venv .venv
-.venv\Scripts\Activate.ps1
-```
-
-### 3. Install dependencies
+## Running Locally
 
 ```bash
 pip install -r requirements.txt
-```
 
-### 4. Set up the SQLite database
-
-```bash
 python setup_database.py
-```
 
-### 5. Train the machine learning models
+python upgrade_world_cup_data.py
 
-```bash
-python run_training.py
-```
+python load_historical_matches.py
 
-### 6. Run the Streamlit app
-
-```bash
 streamlit run app/app.py
 ```
 
-## How the App Works
+---
 
-```text
-Mock CSV Data
-↓
-SQLite Database
-↓
-SQL Queries
-↓
-Python Feature Engineering
-↓
-Machine Learning Models
-↓
-Streamlit Dashboard
-↓
-Saved Predictions Back Into SQL
-```
+## Resume Description
 
-## Database Tables
-
-### teams
-Stores team-level ratings and FIFA ranking.
-
-### players
-Stores player-level scoring metrics.
-
-### matches
-Stores historical match results used for training.
-
-### predictions
-Stores app-generated predictions, proving SQL write-back functionality.
-
-## Important  Note
-
-The current dataset is mock/sample data. It is not meant for real betting or accurate forecasting. The goal of this  is to prove the full technical workflow and create a strong public portfolio project.
-
-## Future Features
-
-- Replace mock data with real World Cup data
-- Add API ingestion pipeline
-- Add Elo ratings
-- Add team form over last 5 matches
-- Add Monte Carlo tournament simulation
-- Add player injury/news inputs
-- Add match venue and home advantage
-- Add model evaluation dashboard
-- Add Docker support
-- Add automated tests
-
-## Resume Bullet Example
-
-Built and deployed a World Cup match prediction web application using Python, SQL, SQLite, scikit-learn, pandas, Plotly, and Streamlit. Designed a relational database, engineered team and player features, trained machine learning models, and created an interactive dashboard for match outcome probabilities, scoreline forecasts, expected goals, and player scoring probabilities.
-# world-cup-match-predictor
+Built a World Cup Match Predictor using Python, SQL, SQLite, Streamlit, and machine learning. Integrated 49,477 historical international football matches from Kaggle, designed a relational database, engineered predictive features, trained machine learning models, and developed an interactive analytics dashboard for match forecasting and team comparison.

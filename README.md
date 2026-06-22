@@ -7,6 +7,19 @@
 ![Kaggle](https://img.shields.io/badge/Data-Kaggle-20BEFF?logo=kaggle)
 ![GitHub](https://img.shields.io/badge/Version_Control-GitHub-black?logo=github)
 
+## Application Preview
+
+### Home Screen
+
+![Home Screen](screenshots/home.png)
+
+### Match Prediction
+
+![Prediction Example](screenshots/prediction.png)
+
+### Team Analysis
+
+![Team Analysis](screenshots/analysis.png)
 ## Overview
 
 A sports analytics application that predicts international football match outcomes using machine learning, SQL, and historical match data.

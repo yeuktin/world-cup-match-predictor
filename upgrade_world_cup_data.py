@@ -58,6 +58,12 @@ WORLD_CUP_TEAMS = [
 conn = sqlite3.connect(DB_PATH)
 cur = conn.cursor()
 
+cur.execute("PRAGMA table_info(teams)")
+cols = [row[1] for row in cur.fetchall()]
+
+if "world_cup_group" not in cols:
+    cur.execute("ALTER TABLE teams ADD COLUMN world_cup_group TEXT")
+
 cur.execute("DELETE FROM teams")
 
 for i, team in enumerate(WORLD_CUP_TEAMS, start=1):

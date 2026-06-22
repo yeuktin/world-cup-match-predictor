@@ -15,13 +15,17 @@
 
 ### Match Prediction
 
-![Prediction Example](screenshots/prediction.png)
+![Match Prediction](screenshots/prediction.png)
 
 ### Team Analysis
 
 ![Team Analysis](screenshots/analysis.png)
+
+---
+
 ## Overview
 
+A sports analytics application that predicts international football match outcomes using machine learning, SQL, and historical match data.
 A sports analytics application that predicts international football match outcomes using machine learning, SQL, and historical match data.
 
 This project integrates **49,477 international football matches** dating back to **1872** from the Kaggle International Football Results dataset and uses SQL-powered analytics to generate:

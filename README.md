@@ -6,20 +6,11 @@
 ![Scikit-Learn](https://img.shields.io/badge/ML-Scikit--Learn-orange?logo=scikitlearn)
 ![Kaggle](https://img.shields.io/badge/Data-Kaggle-20BEFF?logo=kaggle)
 ![GitHub](https://img.shields.io/badge/Version_Control-GitHub-black?logo=github)
-
 ## Application Preview
-
-### Home Screen
 
 ![Home Screen](screenshots/home.png)
 
-### Match Prediction
-
-![Match Prediction](screenshots/prediction.png)
-
-### Team Analysis
-
-![Team Analysis](screenshots/analysis.png)
+...
 
 ---
 

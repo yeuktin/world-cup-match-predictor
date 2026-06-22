@@ -11,15 +11,15 @@
 
 ### Home Screen
 
-![Home Screen](./screenshots/home.png)
+![Home Screen](screenshots/home.png)
 
 ### Match Prediction
 
-![Match Prediction](./screenshots/prediction.png)
+![Match Prediction](screenshots/prediction.png)
 
 ### Team Analysis
 
-![Team Analysis](./screenshots/analysis.png)
+![Team Analysis](screenshots/analysis.png)
 
 ---
 

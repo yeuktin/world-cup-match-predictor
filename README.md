@@ -152,3 +152,4 @@ The current dataset is mock/sample data. It is not meant for real betting or acc
 ## Resume Bullet Example
 
 Built and deployed a World Cup match prediction web application using Python, SQL, SQLite, scikit-learn, pandas, Plotly, and Streamlit. Designed a relational database, engineered team and player features, trained machine learning models, and created an interactive dashboard for match outcome probabilities, scoreline forecasts, expected goals, and player scoring probabilities.
+# world-cup-match-predictor

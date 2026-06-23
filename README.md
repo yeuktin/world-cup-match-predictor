@@ -147,6 +147,8 @@ world-cup-match-predictor/
 ---
 ## Running Locally
 
+Follow these steps to run the project on your own computer.
+
 ### 1. Clone the repository
 
 ```bash
@@ -160,21 +162,63 @@ cd world-cup-match-predictor
 pip install -r requirements.txt
 ```
 
-### 3. Create the SQLite database
+If that does not work, try:
 
 ```bash
-python setup_database.py
+python3 -m pip install -r requirements.txt
 ```
+
+### 3. Initialize the SQLite database
+
+```bash
+python3 setup_database.py
+```
+
+This creates the local SQLite database used by the app.
 
 ### 4. Load World Cup team data
 
 ```bash
-python upgrade_world_cup_data.py
+python3 upgrade_world_cup_data.py
 ```
 
-### 5. (Optional) Load historical Kaggle data
+This loads the national team data required for predictions.
 
-Place:
+### 5. Launch the app
+
+```bash
+streamlit run app/app.py
+```
+
+The app should open in your browser at:
+
+```text
+http://localhost:8501
+```
+
+---
+
+## Optional: Load Full Historical Kaggle Data
+
+The app can also use the Kaggle International Football Results dataset for full historical analytics.
+
+The full Kaggle dataset is not included in this repository.
+
+To enable historical win rates, goals scored per match, goals allowed per match, and historical performance metrics:
+
+### 1. Download the Kaggle dataset
+
+Download the International Football Results dataset from Kaggle.
+
+### 2. Create the external data folder
+
+```bash
+mkdir -p data/external
+```
+
+### 3. Add the Kaggle file
+
+Place this file:
 
 ```text
 results.csv
@@ -186,19 +230,59 @@ inside:
 data/external/
 ```
 
-Then run:
+The file path should look like this:
 
-```bash
-python load_historical_matches.py
+```text
+data/external/results.csv
 ```
 
-### 6. Launch the application
+### 4. Load historical matches into SQLite
+
+```bash
+python3 load_historical_matches.py
+```
+
+### 5. Confirm the data loaded
+
+```bash
+sqlite3 database/worldcup.db "SELECT COUNT(*) FROM historical_matches;"
+```
+
+Expected result:
+
+```text
+49477
+```
+
+or another number close to 49,000 depending on the Kaggle dataset version.
+
+### 6. Run the app again
 
 ```bash
 streamlit run app/app.py
 ```
+
+---
+
+## Quick Start Commands
+
+For the basic version of the app:
+
+```bash
+git clone https://github.com/yeuktin/world-cup-match-predictor.git
+cd world-cup-match-predictor
+pip install -r requirements.txt
+python3 setup_database.py
+python3 upgrade_world_cup_data.py
+streamlit run app/app.py
 ```
 
+For the full version with historical Kaggle analytics, download `results.csv`, place it in `data/external/`, then run:
+
+```bash
+python3 load_historical_matches.py
+streamlit run app/app.py
+```
 ---
 
 ## Resume Description

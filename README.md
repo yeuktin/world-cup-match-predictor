@@ -145,19 +145,58 @@ world-cup-match-predictor/
 ```
 
 ---
-
 ## Running Locally
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/yeuktin/world-cup-match-predictor.git
+cd world-cup-match-predictor
+```
+
+### 2. Install dependencies
 
 ```bash
 pip install -r requirements.txt
+```
 
+### 3. Create the SQLite database
+
+```bash
 python setup_database.py
+```
 
+### 4. Load World Cup team data
+
+```bash
 python upgrade_world_cup_data.py
+```
 
+### 5. (Optional) Load historical Kaggle data
+
+Place:
+
+```text
+results.csv
+```
+
+inside:
+
+```text
+data/external/
+```
+
+Then run:
+
+```bash
 python load_historical_matches.py
+```
 
+### 6. Launch the application
+
+```bash
 streamlit run app/app.py
+```
 ```
 
 ---
